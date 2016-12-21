@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="#304080"
-    app:cardElevation="5dp"
+    app:cardElevation="3dp"
     app:cardCornerRadius="5dp"
-    app:cardMaxElevation="8dp"
+    app:cardMaxElevation="5dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true"
-    app:contentPadding="10dp"
+    app:contentPadding="5dp"
     >
     <LinearLayout
         android:id="@+id/ll_item"
@@ -28,22 +28,22 @@
 
         <TextView
             android:id="@+id/maintitle"
-            style="@style/Base.TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:text="Title"
             android:textColor="#FF4000"
+            android:textSize="14sp"
             />
 
         <TextView
             android:id="@+id/subtitle"
-            style="@style/Base.TextAppearance.AppCompat.Subhead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:text="Subtitle"
             android:textColor="#FF4000"
+            android:textSize="12sp"
             />
 
     </LinearLayout>

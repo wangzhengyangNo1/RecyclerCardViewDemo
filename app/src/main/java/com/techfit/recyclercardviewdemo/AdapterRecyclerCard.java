@@ -39,7 +39,8 @@ public class AdapterRecyclerCard extends RecyclerView.Adapter {
 
         for (int i = 0; i < mItems.size(); i++) {
             Random _random = new Random();
-            int _curDimen = _random.nextInt(160) + 360;
+//            int _curDimen = _random.nextInt(160) + 360;
+            int _curDimen = _random.nextInt(160) + 240;
             mItems.get(i).dimen = _curDimen;
 
         }

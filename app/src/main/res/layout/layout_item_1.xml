@@ -4,18 +4,18 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="#079078"
-    app:cardElevation="5dp"
+    app:cardElevation="3dp"
     app:cardCornerRadius="5dp"
-    app:cardMaxElevation="8dp"
+    app:cardMaxElevation="5dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true"
+    app:contentPadding="5dp"
     >
     <LinearLayout
         android:id="@+id/ll_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp"
         android:gravity="center"
         >
 

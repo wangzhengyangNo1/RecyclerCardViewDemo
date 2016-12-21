@@ -58,7 +58,7 @@ public class ActivityMain extends AppCompatActivity {
     private void initData() {
         mItems = new ArrayList<Item>();
         for (int i = 0; i < ITEM_COUNT; i++) {
-            mItems.add(new Item("Item" + i, "Item Number " + i));
+            mItems.add(new Item("Item" + i, "Number " + i));
         }
     }
 }
