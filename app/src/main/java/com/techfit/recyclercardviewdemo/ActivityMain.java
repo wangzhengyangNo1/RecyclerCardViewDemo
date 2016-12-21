@@ -49,7 +49,8 @@ public class ActivityMain extends AppCompatActivity {
 
             @Override
             public void onItemLongClick(View pView, int pPosition) {
-
+                Item _removedItem = mAdapter.removeItem(pPosition);
+                Toast.makeText(ActivityMain.this.getApplicationContext(), _removedItem.getMainTitle() + " is removed!", Toast.LENGTH_SHORT).show();
             }
         });
     }

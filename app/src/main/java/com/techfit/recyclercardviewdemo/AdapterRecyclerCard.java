@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.techfit.recyclercardviewdemo.bean.Item;
 
@@ -37,7 +38,6 @@ public class AdapterRecyclerCard extends RecyclerView.Adapter {
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         for (int i = 0; i < mItems.size(); i++) {
-            // TODO: 2016/12/14 需要修改
             Random _random = new Random();
             int _curDimen = _random.nextInt(160) + 360;
             mItems.get(i).dimen = _curDimen;
@@ -63,11 +63,11 @@ public class AdapterRecyclerCard extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         Item _item = mItems.get(position);
+//        _item.setSubTitle(position);
+//        _item.setMainTitle(position);
         final RecyclerViewHolder _holder = (RecyclerViewHolder) holder;
         _holder.mMainTitle.setText(_item.getMainTitle());
         _holder.mSubtTitle.setText(_item.getSubTitle());
-
-
 
         ViewGroup.LayoutParams _layoutParams = _holder.itemView.getLayoutParams();
         _layoutParams.height = _item.dimen;
@@ -123,5 +123,12 @@ public class AdapterRecyclerCard extends RecyclerView.Adapter {
 
     public void setOnItemClickListener(OnItemClickListener pListener){
         mOnItemClickListener = pListener;
+    }
+
+    public Item removeItem(int pPosition){
+        Item _removedItem = mItems.remove(pPosition);
+        notifyItemRemoved(pPosition);
+//        notifyDataSetChanged();
+        return _removedItem;
     }
 }
