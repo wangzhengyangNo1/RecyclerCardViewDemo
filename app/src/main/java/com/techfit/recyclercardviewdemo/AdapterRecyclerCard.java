@@ -129,6 +129,7 @@ public class AdapterRecyclerCard extends RecyclerView.Adapter {
         Item _removedItem = mItems.remove(pPosition);
         notifyItemRemoved(pPosition);
 //        notifyDataSetChanged();
+//        notifyItemRangeChanged(pPosition,getItemCount());
         return _removedItem;
     }
 }
